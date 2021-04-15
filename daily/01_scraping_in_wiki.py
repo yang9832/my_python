@@ -22,8 +22,8 @@ def getLinks(atricleUrl):
 	return bs.find('div',{'id':'bodyContent'}).find_all('a',
 		href = re.compile('^(/wiki/)((?!:).)*$'))
 	
-# 设置起始页面	
-links = getLinks('/wiki/Kevin_Bacon')
+# 设置起始页面，沉默的羔羊
+links = getLinks('/wiki/The_Silence_of_the_Lambs_(film)')
 time.sleep(3)
 
 while len(links) > 0:
